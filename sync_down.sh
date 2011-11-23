@@ -13,7 +13,12 @@ then
     mkdir ~/.xmonad
     echo "Making .xmonad"
 fi
-cp ~/.xmonad/xmobar xmonad/xmobar
 echo "Copying xmobar"
-cp ~/.xmonad/xmonad.hs xmonad/xmonad.hs
+cp ~/.xmonad/xmobar xmonad/xmobar
 echo "Copying xmonad.hs"
+cp ~/.xmonad/xmonad.hs xmonad/xmonad.hs
+echo "Copying util scripts"
+for file in $(ls utils/)
+do
+    cp ~/.$file utils/$file
+done
