@@ -1,0 +1,20 @@
+Host ns3
+HostName ns3.oregonstate.edu
+User uberj
+
+Host fran
+HostName francium.electricgrey.com
+User uberj
+
+Host onid
+HostName shell.onid.oregonstate.edu
+User uberj
+
+Host flip
+HostName flip.engr.oregonstate.edu
+User uberj
+
+Host vagrant
+    HostName 127.0.0.1
+    User vagrant
+    Port 2222
