@@ -104,9 +104,8 @@ extract () {
 }
 
 # dircolors
-eval `dircolors $HOME/.dir_colors`
 EDITOR=vim
-PATH=$PATH:/sbin/:/var/lib/gems/1.8/bin
+PATH=$PATH:/sbin/
 
 # Try to keep environment pollution down, EPA loves us.
 unset use_color safe_term match_lhs
@@ -114,7 +113,7 @@ alias d='ls -l | grep -E ^d'
 alias f='ls -l | grep -E ^[^d]'
 alias ll='ls -lah'
 alias sl='ls'
-alias term1="rdesktop -g 1672x1000 -T'nws-term1.nws.oregonstate.edu - Terminal Server Client' -rsound:local -rclipboard:PRIMARYCLIPBOARD -b -4 nws-term1.nws.oregonstate.edu -uuberj -donid"
+alias term1="rdesktop -T'nws-term1.nws.oregonstate.edu - Terminal Server Client' -rsound:local -rclipboard:PRIMARYCLIPBOARD -b -4 nws-term1.nws.oregonstate.edu -uuberj -donid"
 alias dud="$HOME/.file_usage"
 alias pyclean="rm *.pyc"
 alias assh="ssh -A"
