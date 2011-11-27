@@ -99,6 +99,12 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
+# Puppet make module function
+# usage: mkmod <module name>
+mkmod() {
+    mkdir "$1"
+    mkdir "$1/files" "$1/lib" "$1/manifests" "$1/templates" "$1/tests"
+}
 
 # dircolors
 EDITOR=vim
