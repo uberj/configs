@@ -1,5 +1,5 @@
-Host ns3
-HostName ns3.oregonstate.edu
+Host milo
+HostName milo.nws.oregonstate.edu
 User uberj
 
 Host fran
