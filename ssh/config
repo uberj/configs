@@ -14,6 +14,10 @@ Host flip
 HostName flip.engr.oregonstate.edu
 User uberj
 
+Host home
+HostName uberj.dyndns-blog.com
+User uberj
+
 Host vagrant
     HostName 127.0.0.1
     User vagrant
