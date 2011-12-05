@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Sync all files to home dir '~'
-cp ssh/config ~/.ssh/
 echo "Copying ssh config."
+cp ssh/config ~/.ssh/
+echo "Fixing perms."
+chmod 600 ~/.ssh/config
 cp vim/vimrc ~/.vimrc
 echo "Copying vimrc"
 cp bash/bashrc ~/.bashrc
