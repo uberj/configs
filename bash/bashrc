@@ -104,6 +104,10 @@ extract () {
 EDITOR=vim
 PATH=$PATH:/sbin/
 
+# git settings
+git config --global user.name "uberj"
+git config --global user.email uberj@onid.orst.edu
+
 # Try to keep environment pollution down, EPA loves us.
 unset use_color safe_term match_lhs
 alias d='ls -l | grep -E ^d'
