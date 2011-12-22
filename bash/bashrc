@@ -124,3 +124,4 @@ alias term1="rdesktop -g 1672x1000 -T'nws-term1.nws.oregonstate.edu - Terminal S
 alias dud="$HOME/.file_usage"
 alias pyclean="rm *.pyc"
 alias assh="ssh -A"
+alias d="dig @ns-dev.nws.oregonstate.edu"
