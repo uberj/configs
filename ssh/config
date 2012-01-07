@@ -14,6 +14,10 @@ Host flip
 HostName flip.engr.oregonstate.edu
 User uberj
 
+Host milo
+HostName milo.nws.oregonstate.edu
+User uberj
+
 Host vagrant
     HostName 127.0.0.1
     User vagrant
