@@ -1,3 +1,7 @@
+Host ns4jr
+HostName ns4jr.nws.oregonstate.edu
+User root
+
 Host ns3
 HostName ns3.oregonstate.edu
 User uberj
