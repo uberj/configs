@@ -123,6 +123,10 @@ set ignorecase "Ignore case when searching
 set smartcase
 
 set hlsearch "Highlight search things
+"Keep search pattern at the center of the screen.
+nnoremap <leader>n nzz
+nnoremap <leader>N Nzz
+
 
 set incsearch "Make search act like search in modern browsers
 
@@ -574,3 +578,6 @@ match WhitespaceEOL /\s\+$/
 
 set pastetoggle=<F2>
 nma <leader>h :noh<CR>
+
+" Pathogen
+call pathogen#infect()
