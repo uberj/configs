@@ -120,3 +120,4 @@ alias term1="rdesktop -T'nws-term1.nws.oregonstate.edu - Terminal Server Client'
 alias dud="$HOME/.file_usage"
 alias pyclean="rm *.pyc"
 alias assh="ssh -A"
+alias tunm="ssh -D localhost:1234 milo"
