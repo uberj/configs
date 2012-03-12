@@ -7,6 +7,8 @@ echo "Copying ssh config."
 cp ~/.vimrc vim/vimrc
 echo "Copying vimrc"
 cp ~/.bashrc bash/bashrc
+echo "Copying gitconfig"
+cp ~/.gitconfig git/gitconfig
 echo "Copying bashrc"
 if [ ! -d ~/.xmonad ]
 then
