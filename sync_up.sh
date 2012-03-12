@@ -8,6 +8,8 @@ chmod 600 ~/.ssh/config
 cp vim/vimrc ~/.vimrc
 echo "Copying vimrc"
 cp bash/bashrc ~/.bashrc
+echo "Copying gitconfig"
+cp git/gitconfig ~/.gitconfig
 echo "Copying bashrc"
 if [ ! -d ~/.xmonad ]
 then
