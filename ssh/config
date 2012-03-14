@@ -2,6 +2,10 @@ Host ns3
 HostName ns3.oregonstate.edu
 User uberj
 
+Host milo
+HostName milo.oregonstate.edu
+User uberj
+
 Host fran
 HostName francium.electricgrey.com
 User uberj
