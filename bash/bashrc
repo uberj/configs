@@ -120,3 +120,6 @@ alias term1="rdesktop -T'nws-term1.nws.oregonstate.edu - Terminal Server Client'
 alias dud="$HOME/.file_usage"
 alias pyclean="rm *.pyc"
 alias assh="ssh -A"
+alias youtube-dl="youtube-dl -t --audio-format mp3"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/opt/ # Add RVM to PATH for scripting

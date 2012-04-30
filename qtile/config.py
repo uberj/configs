@@ -53,8 +53,8 @@ keys = [
     # cycle to next group
     Key([alt], "Right", lazy.group.nextgroup()),
 
-    # ~/bin/x starts a terminal program
-    Key([alt, "shift"], "Return", lazy.spawn("urxvt")),
+    Key([alt, "shift"], "Return", lazy.spawn("urxvt +j")),
+    #Key([alt, "shift"], "Return", lazy.spawn("gnome-terminal")),
     Key([alt], "period",    lazy.nextlayout()),
     Key([alt], "comma",    lazy.prevlayout()),
 
@@ -104,6 +104,7 @@ layouts = [
     layout.Tile(),
     layout.Max(),
     layout.Stack(),
+    layout.RatioTile(),
 ]
 
 theme = {
@@ -117,34 +118,35 @@ theme = {
 # I have two screens, each of which has a Bar at the bottom. Each Bar has two
 # simple widgets - a GroupBox, and a WindowName.
 screens = [
-    Screen(
-        bottom = bar.Bar(
-                    [
-                        widget.GroupBox(),
-                        widget.WindowName(font='Consolas',fontsize=12, margin_x=6),
-                        widget.Sep(),
-                        widget.CurrentLayout(**theme),
-                        widget.CPUGraph(),
-                        widget.MemoryGraph(),
-                        widget.SwapGraph(foreground='C02020'),
-                        widget.Systray(),
-                        widget.Sep(),
-                        widget.Clock('%H:%M:%S %d.%m.%Y',
-                            font='Consolas', fontsize=12, padding=6),
+        Screen(
+            bottom = bar.Bar(
+                [
+                    widget.GroupBox(),
+                    widget.WindowName(font='Consolas',fontsize=12, margin_x=6),
+                    widget.CurrentLayout(**theme),
+                    widget.Battery(font='Consolas',fontsize=12, margin_x=6),
+                    widget.Sep(),
+                    widget.CPUGraph(),
+                    widget.SwapGraph(foreground='#FFFFE0'),
+                    widget.Systray(),
+                    widget.Sep(),
+                    widget.Prompt(),
+                    widget.Clock('%H:%M:%S %d.%m.%Y',
+                        font='Consolas', fontsize=12, padding=6),
                     ],
-                    30,
+                30,
                 ),
-    ),
-    Screen(
-        bottom = bar.Bar(
-                    [
-                        widget.GroupBox(),
-                        widget.WindowName(font='Consolas',fontsize=12, margin_x=6),
+            ),
+        Screen(
+            bottom = bar.Bar(
+                [
+                    widget.GroupBox(),
+                    widget.WindowName(font='Consolas',fontsize=12, margin_x=6),
                     ],
-                    30,
+                30,
                 ),
-    )
-]
+            )
+        ]
 #### SPAWN DAEMONS ####
 @hook.subscribe.startup
 def runner():

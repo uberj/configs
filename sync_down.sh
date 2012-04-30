@@ -8,6 +8,8 @@ cp ~/.vimrc vim/vimrc
 echo "Copying vimrc"
 cp ~/.bashrc bash/bashrc
 echo "Copying bashrc"
+cp ~/.zshrc zsh/zshrc 
+echo "Copying zshrc"
 if [ ! -d ~/.xmonad ]
 then
     mkdir ~/.xmonad
@@ -22,3 +24,12 @@ for file in $(ls utils/)
 do
     cp ~/.$file utils/$file
 done
+
+if [ ! -d ~/.config/qtile/ ]
+then
+    mkdir -p ~/.config/qtile
+    echo "Making .config/qtile"
+fi
+
+echo "Copying qtile"
+cp ~/.config/qtile/config.py qtile/config.py

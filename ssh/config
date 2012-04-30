@@ -16,5 +16,5 @@ User uberj
 
 Host vagrant
     HostName 127.0.0.1
-    User vagrant
+    User root
     Port 2222

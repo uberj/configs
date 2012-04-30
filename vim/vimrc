@@ -592,3 +592,4 @@ nma <leader>h :noh<CR>
 
 " Pathogen
 call pathogen#infect()
+
