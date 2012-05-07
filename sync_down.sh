@@ -5,7 +5,8 @@ echo "Updating the repo."
 cp ~/.ssh/config ssh/config
 echo "Copying ssh config."
 cp ~/.vimrc vim/vimrc
-echo "Copying vimrc"
+cp -fr ~/.vim/* vim/
+echo "Copying .vimrc and .vim"
 cp ~/.bashrc bash/bashrc
 echo "Copying bashrc"
 cp ~/.zshrc zsh/zshrc 

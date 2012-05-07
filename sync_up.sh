@@ -4,7 +4,8 @@
 cp ssh/config ~/.ssh/
 echo "Copying ssh config."
 cp vim/vimrc ~/.vimrc
-echo "Copying vimrc"
+cp -fr vim/* ~/.vim/
+echo "Copying .vimrc and .vim/"
 cp bash/bashrc ~/.bashrc
 echo "Copying bashrc"
 cp zsh/zshrc ~/.zschrc
