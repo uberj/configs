@@ -1,4 +1,3 @@
 Configs.
 
-`sync_up.sh` -- Updates all target config files.
-`sync_down.sh` -- Updates all config files in the repo with the ones found on the system.
+`update` -- Syncs files in home dir to this repo
