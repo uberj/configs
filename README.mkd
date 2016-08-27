@@ -1,3 +1,10 @@
 Configs.
 
 `update` -- Syncs files in home dir to this repo
+
+Init
+----
+        $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        $ sudo aptitude|yum install zsh
+        $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
