@@ -72,6 +72,11 @@ nmap <leader>rv :so ~/.vimrc<cr>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" Set Paste
+" =========
+nmap <leader>sp :set paste<cr>
+nmap <leader>nsp :set nopaste<cr>
+
 " Buffer Movements
 " ================
 " nmap: normal map

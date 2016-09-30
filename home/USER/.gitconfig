@@ -1,0 +1,11 @@
+[user]
+	email = uberj@miradorfin.com
+	name = Jacques Uber
+[push]
+	default = simple
+[core]
+	autocrlf = input
+[init]
+	templatedir = ~/.git-templates
+[alias]
+	please = push --force-with-lease

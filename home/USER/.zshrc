@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 #source /usr/bin/virtualenvwrapper.sh
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/texlive/2013/bin/x86_64-linux:$HOME/.opam/system/bin
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/texlive/2013/bin/x86_64-linux:$HOME/.opam/system/bin:/sbin/
 
 # Go crap
 export GOROOT=/usr/local/go
