@@ -18,11 +18,11 @@ source $ZSH/oh-my-zsh.sh
 #source /usr/bin/virtualenvwrapper.sh
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/texlive/2013/bin/x86_64-linux:$HOME/.opam/system/bin:/sbin/
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/sbin/
 
 # Go crap
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
+#export GOROOT=/usr/local/go
+#export PATH=$PATH:$GOROOT/bin
 
 extract () {
     if [ -f $1 ] ; then
@@ -47,7 +47,7 @@ extract () {
     fi
 }
 setxkbmap -option ctrl:nocaps
-alias irc="ssh -t $IRC_HOST screen -rdU 7175.irc"
+alias irc="ssh -t $IRC_HOST screen -rdU irc"
 
 bounce () {
 	# $1 = file to bouunce
@@ -92,17 +92,19 @@ function pprintxml() {
 alias pprintjson='python -m json.tool' 
 alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct'
 
-export NVM_DIR="/home/uberj/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/home/uberj/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 export GOROOT=$HOME/bin/go1.6
-export PATH=$GOROOT/bin:$PATH
-source ~/.profile
 alias killallzsh='pgrep zsh | xargs kill -9'
 
 alias bumpopenvpn='sudo kill -1 $(pgrep openvpn)'
 alias json2yaml='python -c "import sys;import json;import yaml; print(yaml.dump(yaml.load(json.dumps(json.loads(sys.stdin.read()))), default_flow_style=False))"'
 
+export NVM_DIR="/home/uberj/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 #du -sk  ./* | sort -n | awk 'BEGIN{ pref[1]="K"; pref[2]="M"; pref[3]="G";} { total = total + $1; x = $1; y = 1; while( x > 1024 ) { x = (x + 1023)/1024; y++; } printf("%g%s\t%s\n",int(x*10)/10,pref[y],$2); } END { y = 1; while( total > 1024 ) { total = (total + 1023)/1024; y++; } printf("Total: %g%s\n",int(total*10)/10,pref[y]); }'
+
 
