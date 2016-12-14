@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Automatically adds branch name and branch description to every commit message.
 #
 if [ -z "$BRANCHES_TO_SKIP" ]; then
-    BRANCHES_TO_SKIP=(master develop test)
+    BRANCHES_TO_SKIP="master develop test"
 fi
 
 BRANCH_NAME=$(git symbolic-ref --short HEAD)

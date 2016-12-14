@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 #source /usr/bin/virtualenvwrapper.sh
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/sbin/
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/sbin/:/home/uberj/bin/node-v6.9.1-linux-x64/bin
 
 # Go crap
 #export GOROOT=/usr/local/go
@@ -33,6 +33,7 @@ extract () {
             *.rar)       unrar x $1     ;;
             *.gz)        gunzip $1     ;;
             *.tar)       tar xvf $1        ;;
+            *.xz)       tar xvf $1        ;;
             *.tbz2)      tar xvjf $1      ;;
             *.tgz)       tar xvzf $1       ;;
             *.zip)       unzip $1     ;;
@@ -73,7 +74,7 @@ tunnel () {
 		ssh -A $1 -t ssh $2
 	fi
 }
-source /usr/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 export IDEA_JDK=/usr/java/jdk1.8.0_40/
 
@@ -92,8 +93,8 @@ function pprintxml() {
 alias pprintjson='python -m json.tool' 
 alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct'
 
-#export NVM_DIR="/home/uberj/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="/home/uberj/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #eval $(thefuck --alias)
 export GOROOT=$HOME/bin/go1.6
