@@ -86,9 +86,7 @@ function resetssh() {
 	ssh $JUMP_HOST -t ssh-keygen -f "/home/uberj/.ssh/known_hosts" -R $1
 }
 
-function pprintxml() {
-	echo $1 | python -c "import lxml.etree as etree;import sys;print(etree.tostring(etree.parse(sys.stdin.read().strip()), pretty_print=True))"
-}
+alias pprintxml='xmllint --format -'
 
 alias pprintjson='python -m json.tool' 
 alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct'
@@ -108,3 +106,6 @@ function loadjs() {
 #du -sk  ./* | sort -n | awk 'BEGIN{ pref[1]="K"; pref[2]="M"; pref[3]="G";} { total = total + $1; x = $1; y = 1; while( x > 1024 ) { x = (x + 1023)/1024; y++; } printf("%g%s\t%s\n",int(x*10)/10,pref[y],$2); } END { y = 1; while( total > 1024 ) { total = (total + 1023)/1024; y++; } printf("Total: %g%s\n",int(total*10)/10,pref[y]); }'
 
 
+function snapshot() {
+        mvn versions:set -DnewVersion="$1-SNAPSHOT" -DgenerateBackupPoms=false
+}
