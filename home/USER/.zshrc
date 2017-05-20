@@ -90,6 +90,7 @@ alias pprintxml='xmllint --format -'
 
 alias pprintjson='python -m json.tool' 
 alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct'
+alias playclassical='nohup vlc http://allclassical-ice.streamguys.com/ac96kmp3 & disown && exit'
 
 #eval $(thefuck --alias)
 export GOROOT=$HOME/bin/go1.6
