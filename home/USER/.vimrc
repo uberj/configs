@@ -31,6 +31,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
@@ -168,3 +169,7 @@ au BufNewFile,BufRead *.sh
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+" hacks 
+" https://github.com/Valloric/YouCompleteMe/issues/1562
+set shortmess+=c
