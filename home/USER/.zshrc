@@ -15,10 +15,11 @@ export SVN_EDITOR=$EDITOR
 
 source $ZSH/oh-my-zsh.sh
 
-#source /usr/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/sbin/:/home/uberj/bin/node-v6.9.1-linux-x64/bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/sbin/:/home/uberj/bin/node-v6.9.1-linux-x64/bin:$HOME/.local/bin
 
 # Go crap
 #export GOROOT=/usr/local/go
@@ -47,7 +48,7 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
-setxkbmap -option ctrl:nocaps
+#setxkbmap -option ctrl:nocaps
 alias irc="ssh -t $IRC_HOST screen -rdU irc"
 
 bounce () {
@@ -74,7 +75,7 @@ tunnel () {
 		ssh -A $1 -t ssh $2
 	fi
 }
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 export IDEA_JDK=/usr/java/jdk1.8.0_40/
 
@@ -110,3 +111,4 @@ function loadjs() {
 function snapshot() {
         mvn versions:set -DnewVersion="$1-SNAPSHOT" -DgenerateBackupPoms=false
 }
+. $HOME/.ghcup/env

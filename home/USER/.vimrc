@@ -28,7 +28,6 @@ Plugin 'Puppet-Syntax-Highlighting'
 Plugin 'elzr/vim-json'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'jlanzarotta/bufexplorer'
@@ -63,6 +62,10 @@ let mapleader = "\<Space>"
 
 " Ctrl-C after "{}" does an open of the statement
 imap <C-c> <CR><Esc>O
+
+" Run command
+" ============
+nmap <leader>r :!
 
 " Reload vimrc
 " ============
